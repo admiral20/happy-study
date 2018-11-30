@@ -16,15 +16,15 @@ const state = {
     }
 }
 
-// const getters = {
-//     // 资讯详情 （头条、组图、多频道）
-//     headDetails(state) {
-//         return state.headDetails;
-//     },
-//     headDetailStatus(state) {
-//         return state.headDetailStatus;
-//     },
-// }
+const getters = {
+    // 资讯详情 （头条、组图、多频道）
+    headDetails(state) {
+        return state.headDetails;
+    },
+    headDetailStatus(state) {
+        return state.headDetailStatus;
+    },
+}
 
 const actions = {
     // 资讯详情 （头条、组图、多频道）

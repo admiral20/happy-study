@@ -7,8 +7,8 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/api/': {
-                // target: 'http://outersvr.sinochem.vip:8765/',
-                target: 'http://gate.social.chuantest.com/',
+                target: 'http://outersvr.sinochem.vip:8765/',
+                // target: 'http://gate.social.chuantest.com/',
                 changeOrigin: true
             },
         }

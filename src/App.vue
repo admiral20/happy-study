@@ -11,7 +11,7 @@
 </template>
 
 <style lang="less">
-@import './assets/reset.css'; // 全局自定义的css样式
+@import '../static/reset.css'; // 全局自定义的css样式
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

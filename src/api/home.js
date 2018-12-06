@@ -1,7 +1,10 @@
 import request from './api'
 
 export default {
-    headDetail(payload) {
-        return request.post('/api/app/auth/headline/detail', payload)
-    },
+  getquery (payload) {
+    return request.post('/api/app/anon/m/headline/query', payload)
+  },
+  getHeadDetail (payload) {
+    return request.post('/api/app/auth/headline/detail', payload)
+  }
 }

@@ -1,16 +1,16 @@
 module.exports = {
     dev: {
-        port: 8086,
-        // host: '0.0.0.0',
+        env: require('./dev.env'),
+        port: 8791,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
             '/api/': {
-                target: 'http://outersvr.sinochem.vip:8765/',
-                // target: 'http://gate.social.chuantest.com/',
+                target: 'http://gate.social.sinochem.vip/', // 社区
+                // target: 'http://gate.social.chuantest.com/', // 社区
                 changeOrigin: true
-            },
+            }
         }
     }
 }

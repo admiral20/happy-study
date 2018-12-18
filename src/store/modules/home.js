@@ -45,11 +45,10 @@ const actions = {
   getquery ({ commit }, payload) {
     commit(types.HEAD_LINE_LIST_REQUEST)
     return api.getquery(payload).then((result) => {
-      console.log(result, 234)
+      console.log(result, 444)
       if (result.code === CONST_REQUEST.CODE_SUCCESS) {
         commit(types.HEAD_LINE_LIST_SUCCESS, result.data)
       } else {
-        console.log('fail')
         commit(types.HEAD_LINE_LIST_FAILURE, result.msg)
       }
       return result.data
@@ -59,7 +58,6 @@ const actions = {
   getHeadDetail ({ commit }, payload) {
     commit(types.GET_HEAD_LINE_REQUEST)
     return api.getHeadDetail(payload).then((result) => {
-      console.log(result, 9888)
       if (result.code === CONST_REQUEST.CODE_SUCCESS) {
         commit(types.GET_HEAD_LINE_SUCCESS, result.data)
       } else {
@@ -82,6 +80,7 @@ const mutations = {
       code: CONST_REQUEST.SUCCESS,
       msg: null
     }
+    console.log(state.headLineList, payload, 345)
     state.headLineList = payload
   },
   [types.HEAD_LINE_LIST_FAILURE] (state, e) {
@@ -99,8 +98,7 @@ const mutations = {
   },
   [types.GET_HEAD_LINE_SUCCESS] (state, payload) {
     state.headDetailStatus = {
-      code: CONST_REQUEST.SUCCESS,
-      msg: null
+      code: CONST_REQUEST.SUCCESS
     }
     state.headDetails = payload
   },

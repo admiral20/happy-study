@@ -5,7 +5,11 @@ import router from './src/router/router'
 import store from './src/store/store'
 import './src/registerServiceWorker'
 
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css'
+
 Vue.config.productionTip = false
+Vue.use(MuseUI)
 
 router.afterEach(route => {
   if (route.name) {

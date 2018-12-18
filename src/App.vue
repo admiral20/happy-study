@@ -2,9 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">首页</router-link>
-      <router-link to="/shopping">购物</router-link>
-      <router-link to="/news">资讯</router-link>
-      <router-link to="/me">我的</router-link>
+      <router-link to="/shopping">2</router-link>
+      <router-link to="/news">3</router-link>
+      <router-link to="/me">4</router-link>
     </div>
     <router-view/>
   </div>
@@ -19,7 +19,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-top: 5px;
 }
 #nav {
   position: fixed;

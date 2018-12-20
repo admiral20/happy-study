@@ -45,7 +45,6 @@ const actions = {
   getquery ({ commit }, payload) {
     commit(types.HEAD_LINE_LIST_REQUEST)
     return api.getquery(payload).then((result) => {
-      console.log(result, 444)
       if (result.code === CONST_REQUEST.CODE_SUCCESS) {
         commit(types.HEAD_LINE_LIST_SUCCESS, result.data)
       } else {

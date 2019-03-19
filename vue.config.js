@@ -2,7 +2,7 @@
 module.exports = {
   pages: {
     index: {
-      entry: './main.js'
+      entry: './src/main.js'
     }
   },
   devServer: {

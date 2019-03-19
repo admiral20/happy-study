@@ -89,16 +89,13 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import CONST_REQUEST from '../../constants/request'
 import formatTime from '../../utill/formatTime.js'
+import CONST_REQUEST from '../../constants/request'
 export default {
   data () {
     return {
       CONST_REQUEST,
       formatTime
-      // value1: undefined,
-      // value2: undefined,
-      // value3: undefined
     }
   },
   computed: {

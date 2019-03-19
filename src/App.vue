@@ -22,11 +22,12 @@
 }
 #nav {
   position: fixed;
+  z-index: 99999;
   bottom: 0;
   overflow: hidden;
   height: 45px;
   line-height: 45px;
-  background: #fff;
+  background: #ffd;
   width: 100%;
   a {
     display: inline-block;

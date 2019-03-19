@@ -1,17 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './src/App.vue'
-import router from './src/router/router'
-import store from './src/store/store'
-import './src/registerServiceWorker'
+import App from './App.vue'
+import router from './router/router'
+import store from './store/store'
+import './registerServiceWorker'
 
-// import MuseUI from 'muse-ui'
 import VueLazyload from 'vue-lazyload'
+import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
 
 Vue.config.productionTip = false
-// Vue.use(MuseUI)
-// Vue.use(VueLazyload)
+Vue.use(MuseUI)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1424326754,4004839403&fm=26&gp=0.jpg',

@@ -10,12 +10,12 @@ module.exports = function (api) {
     presets: [
       '@vue/app'
     ],
-    plugins: [
-      ['import', {
-        'libraryName': 'muse-ui',
-        'libraryDirectory': 'lib',
-        'camel2DashComponentName': false
-      }]
-    ]
+    // plugins: [
+    //   ['import', {
+    //     'libraryName': 'muse-ui',
+    //     'libraryDirectory': 'lib',
+    //     'camel2DashComponentName': false
+    //   }]
+    // ]
   }
 }

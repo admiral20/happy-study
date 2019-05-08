@@ -24,7 +24,7 @@
                 "objects": "only-multiline",
                 "imports": "only-multiline",
                 "exports": "only-multiline",
-                "functions": "ignore",
+                "functions": "ignore"
             }
         ],
         "semi": [ "off" ],
@@ -40,8 +40,8 @@
             {
                 "baseIndent": 1,
                 "switchCase": 1,
-                "ignores": [],
-            },
+                "ignores": []
+            }
         ],
         "vue/html-indent": [
             "error",
@@ -50,13 +50,13 @@
                 "attribute": 1,
                 "closeBracket": 0,
                 "alignAttributesVertically": true,
-                "ignores": [],
-            },
+                "ignores": []
+            }
         ],
 
         "vue/no-side-effects-in-computed-properties": [ "off" ],
         "vue/no-reserved-keys": [ "off" ],
-        "vue/valid-v-model": [ "off" ],
+        "vue/valid-v-model": [ "off" ]
     },
     "overrides": [
         {

@@ -5,13 +5,13 @@
                 首页
             </router-link>
             <router-link to="/shopping">
-                2
+                购物
             </router-link>
             <router-link to="/news">
-                3
+                新闻
             </router-link>
             <router-link to="/me">
-                4
+                我的
             </router-link>
         </div>
         <router-view />

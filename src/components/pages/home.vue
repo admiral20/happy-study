@@ -130,41 +130,42 @@ export default {
 </script>
 <style lang="less" scoped>
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
+
 #headLine {
     width: 100%;
     padding: 5px 0 0;
     background: #fff;
 
     header {
-        margin: -6px 0 5px 0;
-        line-height: 30px;
-        font-size: 18px;
-        font-weight: bold;
         padding: 10px 20px;
+        margin: -6px 0 5px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
     }
 
     section {
-        color: #666;
-        margin-bottom: 10px;
-        height: 20px;
-        padding: 0 20px;
-        line-height: 20px;
-        font-size: 12px;
         display: flex;
         align-items: center;
+        height: 20px;
+        padding: 0 20px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        color: #666;
 
         .author {
             flex: 1;
-            margin-left: 15px;
-            margin-right: 5px;
             width: 200px;
+            margin-right: 5px;
+            margin-left: 15px;
             overflow: hidden;
-            white-space: nowrap;
             text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         & > i {
@@ -172,9 +173,9 @@ export default {
         }
 
         img {
-            margin-right: 5px;
             width: 15px;
             height: 13px;
+            margin-right: 5px;
         }
     }
 
@@ -190,27 +191,27 @@ export default {
 
     .artical {
         width: 100%;
-        padding: 0 20px 0;
+        padding: 0 20px;
         background: #fff;
     }
 
     .answer-box {
         width: 100%;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
         margin-top: 10px;
+        overflow: auto;
         background: #fff;
+        -webkit-overflow-scrolling: touch;
 
         .all-answer {
-            background: #fff;
             padding-left: 20px;
             margin-top: 10px;
+            background: #fff;
 
             & > p {
-                text-align: left;
-                line-height: 50px;
-                font-size: 14px;
                 border-bottom: 1px solid #ddd;
+                font-size: 14px;
+                line-height: 50px;
+                text-align: left;
             }
 
             .answer-ul {
@@ -226,9 +227,9 @@ export default {
 
                             .reply-font {
                                 font-size: 15px;
-                                color: #333;
-                                word-break: break-all;
                                 word-wrap: break-word;
+                                word-break: break-all;
+                                color: #333;
 
                                 span {
                                     font-weight: bolder;
@@ -241,21 +242,21 @@ export default {
                                 line-height: 23px;
 
                                 .nickName {
-                                    font-size: 17px;
-                                    color: #333;
                                     margin-right: 5px;
                                     font-weight: bolder;
+                                    font-size: 17px;
+                                    color: #333;
                                 }
 
                                 .nickSf {
-                                    vertical-align: text-top;
-                                    color: #fff;
                                     display: inline-block;
                                     padding: 0 5px;
-                                    line-height: 18px;
                                     border-radius: 4px;
                                     font-size: 12px;
+                                    line-height: 18px;
+                                    vertical-align: text-top;
                                     letter-spacing: 0;
+                                    color: #fff;
                                 }
 
                                 .isSocailManagerType {
@@ -269,8 +270,8 @@ export default {
 
                             .answer-foot {
                                 width: 100%;
-                                font-size: 12px;
                                 margin-top: 10px;
+                                font-size: 12px;
 
                                 .date-btn {
                                     color: #666;
@@ -282,24 +283,24 @@ export default {
                                 }
 
                                 .reply-btn {
-                                    color: #0062fd;
                                     display: inline-block;
                                     width: 35px;
                                     text-align: right;
+                                    color: #0062fd;
                                 }
 
                                 .praiseCountStyle {
+                                    width: 20px;
                                     height: 25px;
                                     line-height: 25px;
-                                    width: 20px;
                                     background: url(../../../static/images/icon_g2_m.png) no-repeat;
                                     background-size: 85%;
                                 }
 
                                 .noPraiseCountStyle {
+                                    width: 20px;
                                     height: 25px;
                                     line-height: 25px;
-                                    width: 20px;
                                     background: url(../../../static/images/icon_g_m.png) no-repeat;
                                     background-size: 85%;
                                 }
@@ -307,12 +308,12 @@ export default {
                         }
 
                         & > li:nth-child(2) {
-                            text-align: left;
                             flex: 1;
+                            box-sizing: border-box;
                             padding-right: 30px;
                             padding-bottom: 20px;
-                            box-sizing: border-box;
                             border-bottom: 1px solid #ddd;
+                            text-align: left;
 
                             i {
                                 display: inline-block;
@@ -322,10 +323,10 @@ export default {
                         }
 
                         .headPortrait {
+                            position: relative;
                             width: 50px;
                             height: 50px;
                             margin-right: 15px;
-                            position: relative;
 
                             img:first-child {
                                 width: 100%;
@@ -351,10 +352,10 @@ export default {
         }
 
         .noComment {
-            text-align: center;
-            font-size: 15px;
-            color: #333;
             margin: 50px 0;
+            font-size: 15px;
+            text-align: center;
+            color: #333;
         }
     }
 }
@@ -367,8 +368,8 @@ export default {
     }
 
     .artical img {
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
     }
 
     .clearfixed::after {

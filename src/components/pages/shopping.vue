@@ -37,8 +37,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  img {
-    width: 100%;
-    display: inline-block;
-  }
+    img {
+        display: inline-block;
+        width: 100%;
+    }
 </style>

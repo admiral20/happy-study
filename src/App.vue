@@ -11,32 +11,36 @@
 </template>
 
 <style lang="less">
-@import '../static/reset.css'; // 全局自定义的css样式
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  position: fixed;
-  z-index: 99999;
-  bottom: 0;
-  overflow: hidden;
-  height: 45px;
-  line-height: 45px;
-  background: #ffd;
-  width: 100%;
-  a {
-    display: inline-block;
-    width: 25%;
-    font-weight: bold;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
     color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
+
+#nav {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    line-height: 45px;
+    background: #ffd;
+
+    a {
+        display: inline-block;
+        width: 25%;
+        font-weight: bold;
+        color: #2c3e50;
+
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
+}
+
+@import '../static/reset.css'; // 全局自定义的css样式
 </style>

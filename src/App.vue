@@ -1,13 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">首页</router-link>
-      <router-link to="/shopping">2</router-link>
-      <router-link to="/news">3</router-link>
-      <router-link to="/me">4</router-link>
+    <div id="app">
+        <div id="nav">
+            <router-link to="/">
+                首页
+            </router-link>
+            <router-link to="/shopping">
+                2
+            </router-link>
+            <router-link to="/news">
+                3
+            </router-link>
+            <router-link to="/me">
+                4
+            </router-link>
+        </div>
+        <router-view />
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style lang="less">

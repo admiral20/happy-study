@@ -13,6 +13,10 @@ module.exports = {
         // target: 'http://gate.social.chuantest.com/',
         changeOrigin: true
       }
+    },
+    overlay: {
+      warnings: true,
+      errors: true
     }
-  }
+  },
 }

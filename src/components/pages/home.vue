@@ -1,132 +1,151 @@
 <template>
-  <div class="home" id="headLine">
-      <div ref="headLineChild">
-          <header>
+    <div
+        id="headLine"
+        class="home"
+    >
+        <div ref="headLineChild">
+            <header>
                 {{ form.title }}
             </header>
-          <section>
-              <time>{{ form.publishTime }}</time>
-              <span
-                  v-if="form.author"
-                  class="author">{{ form.author }}</span>
-              <img
-                  v-if="form.viewsCount"
-                  src="../../../static/images/icon_viewCount_m.png">
-              <span v-if="form.viewsCount">{{ form.viewsCount }}</span>
-          </section>
-          <div
-              v-if="form.contentImg"
-              class="content">
-              <img
-                  v-lazy="form.contentImg"
-                  class="contentImg">
-          </div>
-          <div
-              class="artical"
-              v-html="form.content"/>
-      </div>
-      <div
-          v-if="form.comments && form.comments.length"
-          ref="answerBox"
-          class="answer-box">
-          <div
-              v-if="form.comments && form.comments.length"
-              class="all-answer">
-              <p>评论<span>{{ form.commentCount?'('+ form.commentCount+')':'' }}</span></p>
-              <ul class="answer-ul">
-                  <li
-                      v-for="(item,index) in form.comments"
-                      :key="index">
-                      <ol>
-                          <li class="headPortrait">
-                              <img
-                                  v-lazy="item.headUrl? item.headUrl : item.userType == 1 ? '../../../static/images/icon_owner.png' : item.userType == 0 ? '../../../static/images/icon_cargo.png' : '../../../static/images/icon_other.png'">
-                              <img
-                                  v-if="item.vipStatus == 1"
-                                  src="../../../static/images/icon_v.png">
-                          </li>
-                          <li>
-                              <p class="role-font clearfixed">
-                                  <span class="nickName">{{ item.nickName }}</span>
-                                  <span
-                                      v-if="item.socailManagerType || item.userType == 1 || item.userType == 0"
-                                      :class="item.socailManagerType == 1 ? 'isSocailManagerType': item.userType !=2? 'noSocailManagerType': null "
-                                      class="nickSf">
-                                      {{ item.socailManagerType == 1? '官方账号': item.userType == 1 ? '船东' :item.userType == 0 ? '货主' : null }}
-                                  </span>
-                              </p>
-                              <p
-                                  v-if="!item.commentedNickName"
-                                  class="reply-font">{{ item.content }}</p>
-                              <p
-                                  v-else
-                                  class="reply-font"> 回复 <span> {{ item.commentedNickName }}： </span> {{ item.content }}
-                              </p>
-                              <p class="answer-foot clearfixed">
-                                  <label class="date-btn">{{ formatTime.formatTime(item.createTime) }}</label>
-                                  <span
-                                      class="reply-btn"
-                                      >回复</span>
-                                  <span>
-                                      <i
-                                          :class="item.praised? 'praiseCountStyle' : 'noPraiseCountStyle'"
-                                      />{{ item.praiseCount }}
-                                  </span>
-                              </p>
-                          </li>
-                      </ol>
-                  </li>
-              </ul>
-          </div>
-          <div
-              v-if="form.commentCount==0"
-              class="noComment">
-              当前没有评论，快抢沙发
-          </div>
-      </div>
-  </div>
+            <section>
+                <time>{{ form.publishTime }}</time>
+                <span
+                    v-if="form.author"
+                    class="author"
+                >{{ form.author }}</span>
+                <img
+                    v-if="form.viewsCount"
+                    src="../../../static/images/icon_viewCount_m.png"
+                >
+                <span v-if="form.viewsCount">{{ form.viewsCount }}</span>
+            </section>
+            <div
+                v-if="form.contentImg"
+                class="content"
+            >
+                <img
+                    v-lazy="form.contentImg"
+                    class="contentImg"
+                >
+            </div>
+            <div
+                class="artical"
+                v-html="form.content"
+            />
+        </div>
+        <div
+            v-if="form.comments && form.comments.length"
+            ref="answerBox"
+            class="answer-box"
+        >
+            <div
+                v-if="form.comments && form.comments.length"
+                class="all-answer"
+            >
+                <p>评论<span>{{ form.commentCount?'('+ form.commentCount+')':'' }}</span></p>
+                <ul class="answer-ul">
+                    <li
+                        v-for="(item,index) in form.comments"
+                        :key="index"
+                    >
+                        <ol>
+                            <li class="headPortrait">
+                                <img
+                                    v-lazy="item.headUrl? item.headUrl : item.userType == 1 ? '../../../static/images/icon_owner.png' : item.userType == 0 ? '../../../static/images/icon_cargo.png' : '../../../static/images/icon_other.png'"
+                                >
+                                <img
+                                    v-if="item.vipStatus == 1"
+                                    src="../../../static/images/icon_v.png"
+                                >
+                            </li>
+                            <li>
+                                <p class="role-font clearfixed">
+                                    <span class="nickName">{{ item.nickName }}</span>
+                                    <span
+                                        v-if="item.socailManagerType || item.userType == 1 || item.userType == 0"
+                                        :class="item.socailManagerType == 1 ? 'isSocailManagerType': item.userType !=2? 'noSocailManagerType': null "
+                                        class="nickSf"
+                                    >
+                                        {{ item.socailManagerType == 1? '官方账号': item.userType == 1 ? '船东' :item.userType == 0 ? '货主' : null }}
+                                    </span>
+                                </p>
+                                <p
+                                    v-if="!item.commentedNickName"
+                                    class="reply-font"
+                                >
+                                    {{ item.content }}
+                                </p>
+                                <p
+                                    v-else
+                                    class="reply-font"
+                                >
+                                    回复 <span> {{ item.commentedNickName }}： </span> {{ item.content }}
+                                </p>
+                                <p class="answer-foot clearfixed">
+                                    <label class="date-btn">{{ formatTime.formatTime(item.createTime) }}</label>
+                                    <span
+                                        class="reply-btn"
+                                    >回复</span>
+                                    <span>
+                                        <i
+                                            :class="item.praised? 'praiseCountStyle' : 'noPraiseCountStyle'"
+                                        />{{ item.praiseCount }}
+                                    </span>
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <div
+                v-if="form.commentCount==0"
+                class="noComment"
+            >
+                当前没有评论，快抢沙发
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-import formatTime from '../../utill/formatTime.js'
-import CONST_REQUEST from '../../constants/request'
-export default {
-  data () {
-    return {
-      CONST_REQUEST,
-      formatTime
+    import { mapActions, mapGetters } from 'vuex'
+    import formatTime from '../../utill/formatTime.js'
+    import CONST_REQUEST from '../../constants/request'
+    export default {
+        data () {
+            return {
+                CONST_REQUEST,
+                formatTime
+            }
+        },
+        computed: {
+            ...mapGetters('home', ['headLineList', 'headLineListStatus', 'headDetails', 'headDetailStatus']),
+            loading () {
+                return this.headDetailStatus.code === CONST_REQUEST.LOADING
+            },
+            failure () {
+                return this.headDetailStatus.code === CONST_REQUEST.FAILURE
+            },
+            failureMsg () {
+                return this.headDetailStatus.msg
+            },
+            form () {
+                if (this.headDetails) {
+                    return this.headDetails
+                } else {
+                    return false
+                }
+            }
+        },
+        mounted () {
+            document.cookie = 'token=;path=/'
+            // this.getquery({ channelId: 99, pageSize: 10 })
+            this.getHeadDetail({ id: 75 })
+        },
+        methods: {
+            ...mapActions('home', ['getquery', 'getHeadDetail'])
+        },
     }
-  },
-  computed: {
-    ...mapGetters('home', ['headLineList', 'headLineListStatus', 'headDetails', 'headDetailStatus']),
-    loading () {
-      return this.headDetailStatus.code === CONST_REQUEST.LOADING
-    },
-    failure () {
-      return this.headDetailStatus.code === CONST_REQUEST.FAILURE
-    },
-    failureMsg () {
-      return this.headDetailStatus.msg
-    },
-    form () {
-      if (this.headDetails) {
-        return this.headDetails
-      } else {
-        return false
-      }
-    }
-  },
-  methods: {
-    ...mapActions('home', ['getquery', 'getHeadDetail'])
-  },
-  mounted () {
-    window.xxx = this
-    document.cookie = 'token=;path=/'
-    // this.getquery({ channelId: 99, pageSize: 10 })
-    this.getHeadDetail({ id: 75 })
-  }
-}
 </script>
 <style lang="less" scoped>
 * {

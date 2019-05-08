@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "eslint": "eslint --ext .js,.vue src",
+    "lint": "npm run eslint && npm run stylelint",
     "stylelint": "stylelint src/**/*.vue src/**/*.less src/**/*.css"
   },
   "dependencies": {
@@ -17,14 +18,13 @@
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "stylelint": "^10.0.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "stylelint": "^10.0.1",
     "@commitlint/cli": "^7.6.0",
     "@commitlint/config-conventional": "^7.6.0",
     "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-eslint": "^3.1.5",
     "@vue/cli-plugin-pwa": "^3.1.2",
     "@vue/cli-service": "^3.7.0",
     "@vue/eslint-config-standard": "^4.0.0",
@@ -36,7 +36,12 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "stylelint-config-standard": "^18.3.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
   },
   "eslintConfig": {
     "root": true,

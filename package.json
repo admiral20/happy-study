@@ -21,7 +21,6 @@
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "stylelint": "^10.0.1",
     "@commitlint/cli": "^7.6.0",
     "@commitlint/config-conventional": "^7.6.0",
     "@vue/cli-plugin-babel": "^3.1.1",
@@ -31,41 +30,24 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-import": "^1.11.0",
     "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "husky": "^2.2.0",
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
-    "stylelint-config-standard": "^18.3.0",
-    "vue-template-compiler": "^2.5.17",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "husky": "^2.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $GIT_PARAMS",
       "pre-push": "npm run lint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
     }
   },
   "browserslist": [

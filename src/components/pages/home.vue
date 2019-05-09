@@ -150,41 +150,41 @@
 <style lang="less" scoped>
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 #headLine {
-    width: 100%;
-    padding: 5px 0 0;
     background: #fff;
+    padding: 5px 0 0;
+    width: 100%;
 
     header {
-        padding: 10px 20px;
-        margin: -6px 0 5px;
-        font-weight: bold;
         font-size: 18px;
+        font-weight: bold;
         line-height: 30px;
+        margin: -6px 0 5px;
+        padding: 10px 20px;
     }
 
     section {
-        display: flex;
         align-items: center;
-        height: 20px;
-        padding: 0 20px;
-        margin-bottom: 10px;
-        font-size: 12px;
-        line-height: 20px;
         color: #666;
+        display: flex;
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        padding: 0 20px;
 
         .author {
             flex: 1;
-            width: 200px;
-            margin-right: 5px;
             margin-left: 15px;
+            margin-right: 5px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            width: 200px;
         }
 
         & > i {
@@ -192,39 +192,39 @@
         }
 
         img {
-            width: 15px;
             height: 13px;
             margin-right: 5px;
+            width: 15px;
         }
     }
 
     .content {
-        width: 100%;
         padding: 0 20px;
+        width: 100%;
 
         .contentImg {
-            width: 100%;
             border-radius: 10px;
+            width: 100%;
         }
     }
 
     .artical {
-        width: 100%;
-        padding: 0 20px;
         background: #fff;
+        padding: 0 20px;
+        width: 100%;
     }
 
     .answer-box {
-        width: 100%;
+        background: #fff;
         margin-top: 10px;
         overflow: auto;
-        background: #fff;
         -webkit-overflow-scrolling: touch;
+        width: 100%;
 
         .all-answer {
-            padding-left: 20px;
-            margin-top: 10px;
             background: #fff;
+            margin-top: 10px;
+            padding-left: 20px;
 
             & > p {
                 border-bottom: 1px solid #ddd;
@@ -245,10 +245,10 @@
                             }
 
                             .reply-font {
-                                font-size: 15px;
-                                word-wrap: break-word;
-                                word-break: break-all;
                                 color: #333;
+                                font-size: 15px;
+                                word-break: break-all;
+                                word-wrap: break-word;
 
                                 span {
                                     font-weight: bolder;
@@ -261,21 +261,21 @@
                                 line-height: 23px;
 
                                 .nickName {
-                                    margin-right: 5px;
-                                    font-weight: bolder;
-                                    font-size: 17px;
                                     color: #333;
+                                    font-size: 17px;
+                                    font-weight: bolder;
+                                    margin-right: 5px;
                                 }
 
                                 .nickSf {
-                                    display: inline-block;
-                                    padding: 0 5px;
                                     border-radius: 4px;
-                                    font-size: 12px;
-                                    line-height: 18px;
-                                    vertical-align: text-top;
-                                    letter-spacing: 0;
                                     color: #fff;
+                                    display: inline-block;
+                                    font-size: 12px;
+                                    letter-spacing: 0;
+                                    line-height: 18px;
+                                    padding: 0 5px;
+                                    vertical-align: text-top;
                                 }
 
                                 .isSocailManagerType {
@@ -288,73 +288,73 @@
                             }
 
                             .answer-foot {
-                                width: 100%;
-                                margin-top: 10px;
                                 font-size: 12px;
+                                margin-top: 10px;
+                                width: 100%;
 
                                 .date-btn {
                                     color: #666;
                                 }
 
                                 span:last-child {
-                                    float: right;
                                     display: flex;
+                                    float: right;
                                 }
 
                                 .reply-btn {
-                                    display: inline-block;
-                                    width: 35px;
-                                    text-align: right;
                                     color: #0062fd;
+                                    display: inline-block;
+                                    text-align: right;
+                                    width: 35px;
                                 }
 
                                 .praiseCountStyle {
-                                    width: 20px;
-                                    height: 25px;
-                                    line-height: 25px;
                                     background: url(../../../static/images/icon_g2_m.png) no-repeat;
                                     background-size: 85%;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 20px;
                                 }
 
                                 .noPraiseCountStyle {
-                                    width: 20px;
-                                    height: 25px;
-                                    line-height: 25px;
                                     background: url(../../../static/images/icon_g_m.png) no-repeat;
                                     background-size: 85%;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    width: 20px;
                                 }
                             }
                         }
 
                         & > li:nth-child(2) {
-                            flex: 1;
-                            box-sizing: border-box;
-                            padding-right: 30px;
-                            padding-bottom: 20px;
                             border-bottom: 1px solid #ddd;
+                            box-sizing: border-box;
+                            flex: 1;
+                            padding-bottom: 20px;
+                            padding-right: 30px;
                             text-align: left;
 
                             i {
                                 display: inline-block;
-                                width: 20px;
                                 font-size: 15px;
+                                width: 20px;
                             }
                         }
 
                         .headPortrait {
-                            position: relative;
-                            width: 50px;
                             height: 50px;
                             margin-right: 15px;
+                            position: relative;
+                            width: 50px;
 
                             img:first-child {
-                                width: 100%;
                                 border-radius: 50%;
+                                width: 100%;
                             }
 
                             img:nth-child(2) {
-                                position: absolute;
                                 bottom: 0;
+                                position: absolute;
                                 right: 0;
                                 width: 36%;
                             }
@@ -371,10 +371,10 @@
         }
 
         .noComment {
-            margin: 50px 0;
-            font-size: 15px;
-            text-align: center;
             color: #333;
+            font-size: 15px;
+            margin: 50px 0;
+            text-align: center;
         }
     }
 }
@@ -382,18 +382,18 @@
 <style>
     .artical p {
         line-height: 30px;
-        word-wrap: break-word;
         word-break: break-all;
+        word-wrap: break-word;
     }
 
     .artical img {
-        width: 100%;
         max-width: 100%;
+        width: 100%;
     }
 
     .clearfixed::after {
         clear: both;
-        display: table;
         content: '';
+        display: table;
     }
 </style>

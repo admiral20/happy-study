@@ -21,28 +21,28 @@
 <style lang="less">
 
 #app {
+    color: #2c3e50;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
 }
 
 #nav {
-    position: fixed;
-    z-index: 99999;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    overflow: hidden;
-    line-height: 45px;
     background: #ffd;
+    bottom: 0;
+    height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 
     a {
-        display: inline-block;
-        width: 25%;
-        font-weight: bold;
         color: #2c3e50;
+        display: inline-block;
+        font-weight: bold;
+        width: 25%;
 
         &.router-link-exact-active {
             color: #42b983;

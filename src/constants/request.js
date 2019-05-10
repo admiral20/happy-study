@@ -4,5 +4,5 @@ export default {
     CODE_PERMISSION_DENIED: -1002,
     LOADING: Symbol('LOADING'),
     SUCCESS: Symbol('SUCCESS'),
-    FAILURE: Symbol('FAILURE'),
+    FAILURE: Symbol('FAILURE')
 }

@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            按住拖动
+        </div>
+    </div>
+</body>
+<style>
+    .outer {
+        border: 1px solid red;
+        height: 300px;
+        width: 300px;
+    }
+
+    .inner {
+        background: gray;
+        height: 100px;
+        line-height: 100px;
+        position: absolute;
+        text-align: center;
+        width: 100px;
+    }
+</style>
+<script>
+    // function handelInner () {
+    //     console.log(aaa, 'aaa');
+    // }
+
+    // function handelInnerDown (ddd) {
+    //     console.log(ddd, 'dddd');
+        
+    // }
+    window.onload = (()=> {
+        const dragDom = document.querySelector('.inner')
+        
+        dragDom.onmousedown = ((event)=> {
+            let event = event || window.event;
+            console.log(event, 'event');
+        })
+    })
+</script>
+</html>

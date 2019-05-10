@@ -1,13 +1,22 @@
-// vue.config.js
+
 module.exports = {
-    chainWebpack: config => {
-        config.module
-            .rule('vue')
-            .use('vue-loader')
-            .loader('vue-loader')
-            .tap(options => {
-                // 修改它的选项...
-                return options
-            })
+  pages: {
+    index: {
+      entry: './src/main.js'
     }
+  },
+  devServer: {
+    port: 8799,
+    proxy: {
+      '/api/': {
+        target: 'http://gate.social.sinochem.vip/',
+        // target: 'http://gate.social.chuantest.com/',
+        changeOrigin: true
+      }
+    },
+    overlay: {
+      warnings: true,
+      errors: true
+    }
+  },
 }

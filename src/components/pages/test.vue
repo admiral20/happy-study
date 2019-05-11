@@ -1,11 +1,17 @@
 <template>
     <div>
-        <children :address="address" :obj="obj"/>
+        <children
+            :address="address"
+            :obj="obj"
+        />
     </div>
 </template>
 <script>
     import children from './testChild.vue'
     export default {
+        components: {
+            children,
+        },
         data () {
             return {
                 address: '北京',
@@ -16,9 +22,6 @@
                     weigth: 80,
                 }
             }
-        },
-        components: {
-            children,
         },
         mounted () {
             this.draw()

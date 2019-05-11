@@ -26,6 +26,11 @@ export default new Router({
             path: '/me',
             name: 'me',
             component: () => import('../components/pages/me.vue')
+        },
+        {
+            path: '/test',
+            name: 'test',
+            component: () => import('../components/pages/test.vue')
         }
     ]
 })

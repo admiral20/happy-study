@@ -10,7 +10,7 @@
             <router-link to="/news">
                 新闻
             </router-link>
-            <router-link to="/me">
+            <router-link to="/test">
                 我的
             </router-link>
         </div>

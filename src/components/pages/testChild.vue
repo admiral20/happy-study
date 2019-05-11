@@ -25,14 +25,9 @@
         },
         watch: {
             address (val) {
-                deep: true,
-                      console.log(val, 'val')
+                console.log(val, 'val')
             },
             obj (val) {
-                // {
-                //     deep: true,
-                //     immediate: true
-                // }
                 console.log(val, 'obj')
             },
         }

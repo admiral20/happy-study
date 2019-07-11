@@ -1,0 +1,62 @@
+stages:
+  - setup
+  - version
+  - build
+  - deploy
+
+setup:
+  stage: setup
+  script:
+    - npm i
+    # - npm update -d
+  only:
+    - master
+    - develop
+    - /^v[0-9]+\.[0-9]+\.[0-9]+(-(alpha|beta|rc)\.[0-9]+)$/
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_PIPELINE_ID-node_modules"
+    paths:
+      - package.json
+      - package-lock.json
+      - node_modules/
+  # cache:
+  #   untracked: true
+  #   key: "$CI_PROJECT_NAME-$CI_PROJECT_ID-node_modules"
+  #   paths:
+  #     - node_modules/
+
+version:
+  stage: version
+  script:
+    - npm run postversion -- -p false -f true -t false
+  only:
+    - develop
+  except:
+    - tags
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_PIPELINE_ID-package"
+    paths:
+      - package.json
+      - package-lock.json
+
+build:
+  stage: build
+  script:
+    - npm run build
+  only:
+    - master
+    - develop
+    - /^v[0-9]+\.[0-9]+\.[0-9]+(-(alpha|beta|rc)\.[0-9]+)$/
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_PROJECT_ID-$CI_PIPELINE_ID-dist"
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - npm run deploy
+  only:
+    - master
+    - develop
+    - /^v[0-9]+\.[0-9]+\.[0-9]+(-(alpha|beta|rc)\.[0-9]+)$/

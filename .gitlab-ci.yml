@@ -7,7 +7,7 @@ stages:
 setup:
   stage: setup
   script:
-    - npm i
+    - npm install
     # - npm update -d
   only:
     - master
